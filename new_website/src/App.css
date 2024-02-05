@@ -11,3 +11,33 @@
 .main-content {
   margin-left: 150px; /* Adjust according to your Navbar's width */
 }
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.coffee_pot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 110px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
+
+.coffee-image {
+  width: 75px; /* Adjust the width value as per your requirement */
+  height: 100px; /* Adjust the height value as per your requirement */
+}
+
+.coffee_pot p {
+  margin-top: 10px;
+}
