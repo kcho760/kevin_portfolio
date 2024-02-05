@@ -1,0 +1,44 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px; /* Adjust width as needed */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #000000; /* Dark background for the navbar */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Removed padding to allow items to fill up space */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar li {
+  flex: 1; /* Distribute space evenly among items */
+  background-color: #000; /* Black background for each item */
+  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+  display: flex;
+  align-items: center; /* Center the link vertically */
+}
+
+.navbar li:hover {
+  transform: translateX(20px); /* Slide out on hover */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 20px; /* Padding inside each box */
+  width: 100%; /* Ensure the anchor tag fills the li for a larger clickable area */
+  text-align: right;
+}

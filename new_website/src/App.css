@@ -1,0 +1,13 @@
+/* When Navbar is visible */
+.App-content {
+  margin-left: 250px; /* Adjust based on Navbar width */
+}
+
+/* Initially, when Navbar is not yet visible */
+.App-content-no-navbar {
+  margin-left: 0;
+}
+
+.main-content {
+  margin-left: 150px; /* Adjust according to your Navbar's width */
+}

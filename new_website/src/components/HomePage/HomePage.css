@@ -1,0 +1,32 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent; /* Assuming you want no background color */
+}
+
+.triangle {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Triangle color */
+  z-index: 1;
+}
+
+.top-triangle {
+  clip-path: polygon(0 0, 100vw 0, 100vw 100vh);
+}
+
+.bottom-triangle {
+  clip-path: polygon(0 0, 0 100vh, 100vw 100vh);
+}
+.name {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  z-index: 2;
+}
