@@ -1,43 +1,87 @@
-.slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px; /* Adjust to your preference */
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slide {
-    background-size: cover;
-    background-position: center;
-    width: 300px; /* Adjust to your preference */
-    height: 400px; /* Adjust to your preference */
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: transform 0.5s ease, z-index 0.5s ease, opacity 0.5s ease;
-  }
-  
-  .slide.active {
-    z-index: 2;
-    transform: translateX(-50%) translateY(-50%) scale(1.1);
-  }
-  
-  .slide.inactive {
-    cursor: pointer;
-    z-index: 1;
-    transform: translateX(-50%) translateY(-50%) scale(0.8);
-    opacity: 0.7; /* Adjust opacity as needed */
-  }
-  
-  /* Positioning for the left and right slides */
-  .slide.inactive:nth-child(1) {
-    transform: translateX(-50%) translateY(-50%) scale(0.8) translateX(-30%) skewX(30deg);
-  }
-  
-  .slide.inactive:nth-child(3) {
-    transform: translateX(-50%) translateY(-50%) scale(0.8) translateX(30%) skewX(-30deg);
-  }
-  
+.project-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slide-box {
+  position: relative;
+  width: 800px; /* Adjust based on your preference */
+  height: 600px; /* Adjust based on your preference */
+  background-color: #fff; /* Or any color that matches your design */
+  overflow: hidden;
+}
+
+.project-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* set 1 */
+
+/* .stripe-1 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+}
+
+.stripe-2 {
+  clip-path: polygon(100% 0%, 100% 50%, 50% 0%);
+  z-index: 1;
+}
+
+.stripe-3 {
+  clip-path: polygon(100% 0%, 100% 30%, 70% 0%);
+  z-index: 2;
+} */
+
+/* set 2 */
+
+/* .stripe-1 {
+  clip-path: polygon(0 100%, 50% 100%, 0 50%);
+  z-index: 0;
+}
+
+.stripe-2 {
+  clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 50% 100%, 0 50%, 0 0);
+  z-index: 1;
+}
+
+.stripe-3 {
+  clip-path: polygon(50% 0%, 100% 50%, 100% 0);
+  z-index: 2;
+} */
+
+/* set 3 */
+
+.stripe-1 {
+  clip-path: polygon(0 100%, 50% 100%, 0 50%);
+  z-index: 0;
+}
+
+.stripe-2 {
+  clip-path: polygon(0 50%, 0 15%, 75% 100%, 50% 100%);
+  z-index: 1;
+}
+
+.stripe-3 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%, 0 25%);
+  z-index: 2;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-inner {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  color: #fff; /* This should be a color that contrasts with your images */
+}

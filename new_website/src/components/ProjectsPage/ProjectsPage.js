@@ -5,49 +5,31 @@ import scenery3 from '../../assets/scenery3.jpeg';
 import './ProjectsPage.css';
 
 const slides = [
-  {
-    id: 1,
-    title: 'Project 1',
-    image: scenery1,
-    link: 'project1link',
-  },
-  {
-    id: 2,
-    title: 'Project 2',
-    image: scenery2,
-    link: 'project2link',
-  },
-  {
-    id: 3,
-    title: 'Project 3',
-    image: scenery3,
-    link: 'project3link',
-  },
-  // Add more projects as needed
+  { id: 1, title: 'Project 1', image: scenery1, link: '#project1' },
+  { id: 2, title: 'Project 2', image: scenery2, link: '#project2' },
+  { id: 3, title: 'Project 3', image: scenery3, link: '#project3' },
 ];
 
 const ProjectsPage = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
 
-  const handleClick = (index) => {
-    setActiveIndex(index);
+  const handleSlideClick = (index) => {
+    setActiveSlide(index);
   };
 
   return (
-    <div className="slider-container">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`slide ${index === activeIndex ? 'active' : 'inactive'}`}
-          onClick={() => handleClick(index)}
-          style={{
-            backgroundImage: `url(${slide.image})`,
-          }}
-        >
-          <h2>{slide.title}</h2>
-          <a href={slide.link}>Learn More</a>
-        </div>
-      ))}
+    <div className="project-page">
+      <div className="slide-box">
+        {slides.map((slide, index) => (
+          <div key={slide.id} className={`project-card stripe-${index + 1}`}>
+            <img src={slide.image} alt={slide.title} />
+            <div className="card-inner">
+              <h2>{slide.title}</h2>
+              <a href={slide.link}>Learn More</a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

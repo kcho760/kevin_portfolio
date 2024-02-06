@@ -4,7 +4,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100px; /* Adjust width as needed */
+  width: 10%; /* Adjust width as needed */
   height: 100vh; /* Full height of the viewport */
   background-color: #000000; /* Dark background for the navbar */
   color: white;

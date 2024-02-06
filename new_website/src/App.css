@@ -1,6 +1,7 @@
 /* When Navbar is visible */
-.App-content {
-  margin-left: 250px; /* Adjust based on Navbar width */
+.App {
+  padding-left: 0px; /* Adjust this to match the width of your Navbar */
+  transition: padding-left 0.3s; /* Smooth transition for a toggle effect */
 }
 
 /* Initially, when Navbar is not yet visible */
