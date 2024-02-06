@@ -1,27 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
+import scenery1 from '../../assets/scenery1.jpeg';
+import scenery2 from '../../assets/scenery2.jpeg';
+import scenery3 from '../../assets/scenery3.jpeg';
+import './ProjectsPage.css';
+
+const slides = [
+  {
+    id: 1,
+    title: 'Project 1',
+    image: scenery1,
+    link: 'project1link',
+  },
+  {
+    id: 2,
+    title: 'Project 2',
+    image: scenery2,
+    link: 'project2link',
+  },
+  {
+    id: 3,
+    title: 'Project 3',
+    image: scenery3,
+    link: 'project3link',
+  },
+  // Add more projects as needed
+];
 
 const ProjectsPage = () => {
-    return (
-        <div>
-            <h1>Projects Page</h1>
-            {/* Add your projects here */}
-            <div>
-                <h2>Project 1</h2>
-                <img src="placeholder1.jpg" alt="Project 1" />
-                <a href="project1link">Project 1 Link</a>
-            </div>
-            <div>
-                <h2>Project 2</h2>
-                <img src="placeholder2.jpg" alt="Project 2" />
-                <a href="project2link">Project 2 Link</a>
-            </div>
-            <div>
-                <h2>Project 3</h2>
-                <img src="placeholder3.jpg" alt="Project 3" />
-                <a href="project3link">Project 3 Link</a>
-            </div>
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
+  return (
+    <div className="slider-container">
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`slide ${index === activeIndex ? 'active' : 'inactive'}`}
+          onClick={() => handleClick(index)}
+          style={{
+            backgroundImage: `url(${slide.image})`,
+          }}
+        >
+          <h2>{slide.title}</h2>
+          <a href={slide.link}>Learn More</a>
         </div>
-    );
+      ))}
+    </div>
+  );
 };
 
 export default ProjectsPage;
