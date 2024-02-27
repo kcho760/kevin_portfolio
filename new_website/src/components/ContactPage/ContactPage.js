@@ -1,4 +1,5 @@
 import React from 'react';
+import './ContactPage.css';
 
 const ContactPage = () => {
     const handleSubmit = (e) => {
@@ -7,7 +8,7 @@ const ContactPage = () => {
     };
 
     return (
-        <div>
+        <div className='contact-page'>
             <h1>Contact Page</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:</label>

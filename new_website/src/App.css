@@ -2,6 +2,8 @@
 .App {
   padding-left: 0px; /* Adjust this to match the width of your Navbar */
   transition: padding-left 0.3s; /* Smooth transition for a toggle effect */
+  background-color:rgb(227, 227, 227);
+
 }
 
 /* Initially, when Navbar is not yet visible */
@@ -11,7 +13,7 @@
 
 .main-content {
   margin-left: 210px; /* Adjust according to your Navbar's width */
-  width: calc(100vw - 210px); /* Subtract the Navbar width from the viewport width */
+  width: calc(100vw - 220px); /* Subtract the Navbar width from the viewport width */
   height: 100vh;
 }
 
@@ -21,7 +23,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: white;
 }
 
 .coffee_pot {
