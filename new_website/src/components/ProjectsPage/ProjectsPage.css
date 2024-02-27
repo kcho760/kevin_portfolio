@@ -1,87 +1,78 @@
-.project-page {
+/* .project-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
 
-.slide-box {
+.carousel-container {
+  top: 15%;
+  perspective: 100%;
+  height: 700px; /* Adjust based on your needs */
+  width: 100%;
   position: relative;
-  width: 800px; /* Adjust based on your preference */
-  height: 600px; /* Adjust based on your preference */
-  background-color: #fff; /* Or any color that matches your design */
   overflow: hidden;
 }
 
-.project-card {
+.carousel {
   width: 100%;
   height: 100%;
   position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 
-/* set 1 */
-
-/* .stripe-1 {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 0;
+.carousel-slide {
+  position: absolute;
+  width: 100%; /* Adjust based on your slide size */
+  height: 100%; /* Adjust based on your slide size */
+  left: 0%; /* Centering the slide. Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
 }
 
-.stripe-2 {
-  clip-path: polygon(100% 0%, 100% 50%, 50% 0%);
-  z-index: 1;
-}
-
-.stripe-3 {
-  clip-path: polygon(100% 0%, 100% 30%, 70% 0%);
-  z-index: 2;
-} */
-
-/* set 2 */
-
-/* .stripe-1 {
-  clip-path: polygon(0 100%, 50% 100%, 0 50%);
-  z-index: 0;
-}
-
-.stripe-2 {
-  clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 50% 100%, 0 50%, 0 0);
-  z-index: 1;
-}
-
-.stripe-3 {
-  clip-path: polygon(50% 0%, 100% 50%, 100% 0);
-  z-index: 2;
-} */
-
-/* set 3 */
-
-.stripe-1 {
-  clip-path: polygon(0 100%, 50% 100%, 0 50%);
-  z-index: 0;
-}
-
-.stripe-2 {
-  clip-path: polygon(0 50%, 0 15%, 75% 100%, 50% 100%);
-  z-index: 1;
-}
-
-.stripe-3 {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%, 0 25%);
-  z-index: 2;
-}
-
-.project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+img {
+  width: 100%; /* Adjust based on your needs */
+  height: auto;
+  border-radius: 15px; /* Optional: for rounded corners */
 }
 
 .card-inner {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  transform: translate(-50%, -50%);
-  left: 50%;
+  bottom: 20px;
+  text-align: center;
+}
+
+.control-btn {
+  position: absolute;
   top: 50%;
-  color: #fff; /* This should be a color that contrasts with your images */
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 24px;
+  z-index: 100;
+  border-radius: 5px;
+  opacity: 0.7;
+}
+
+.control-btn:hover {
+  opacity: 1;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+/* Ensure backface visibility is hidden for a cleaner transition */
+.carousel-slide {
+  backface-visibility: hidden;
 }

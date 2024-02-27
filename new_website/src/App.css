@@ -10,7 +10,9 @@
 }
 
 .main-content {
-  margin-left: 150px; /* Adjust according to your Navbar's width */
+  margin-left: 210px; /* Adjust according to your Navbar's width */
+  width: calc(100vw - 210px); /* Subtract the Navbar width from the viewport width */
+  height: 100vh;
 }
 
 .welcome-content {
